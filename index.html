@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="dynamic-island-windows - The fluid, tactile Dynamic Island and Control Center for Windows 10 & 11 built with Tauri 2, Rust Win32 APIs, React 19, and Framer Motion.">
+    <meta name="keywords" content="apple-hud,control-center,desktop-widget,dynamic-island,framer-motion,media-player,react,rust,system-monitor,tauri,windows-10,windows-11">
+    <meta name="author" content="solar3891">
+    <meta property="og:title" content="✨ dynamic-island-windows - Turns Your PC Into a Modern Hub">
+    <meta property="og:description" content="The fluid, tactile Dynamic Island and Control Center for Windows 10 & 11 built with Tauri 2, Rust Win32 APIs, React 19, and Framer Motion.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/solar3891/dynamic-island-windows">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>✨ dynamic-island-windows - Turns Your PC Into a Modern Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.85);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #f8fafc;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.5px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #cbd5e1;
+            margin: 2.2rem 0 1rem 0;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid rgba(99, 102, 241, 0.5);
+            display: inline-block;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.4rem;
+            color: #e2e8f0;
+            text-align: justify;
+        }
+        a {
+            color: #818cf8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #a5b4fc;
+            text-decoration: underline;
+        }
+        .download-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: 800;
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4), 0 4px 8px rgba(0,0,0,0.3);
+            text-align: center;
+            text-decoration: none;
+            margin: 2rem auto;
+            display: table;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+        }
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(99, 102, 241, 0.6), 0 6px 12px rgba(0,0,0,0.4);
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+        }
+        .feature-item {
+            background: rgba(51, 65, 85, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .feature-item span {
+            display: block;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-top: 0.5rem;
+        }
+        .emoji-icon {
+            font-size: 2rem;
+        }
+        ul {
+            margin: 1rem 0 1.2rem 1.8rem;
+        }
+        li {
+            font-size: 1.05rem;
+            margin-bottom: 0.7rem;
+            color: #e2e8f0;
+        }
+        .disclaimer {
+            background: rgba(100, 116, 139, 0.2);
+            padding: 1.2rem;
+            border-radius: 12px;
+            border-left: 4px solid #6366f1;
+            margin: 2rem 0;
+        }
+        .disclaimer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ dynamic-island-windows - Turns Your PC Into a Modern Hub</h1>
+        <p style="text-align:center; font-size:1.2rem; margin-bottom:2rem;">The fluid, tactile Dynamic Island and Control Center for Windows 10 &amp; 11 built with Tauri 2, Rust Win32 APIs, React 19, and Framer Motion.</p>
+        <a href="https://github.com/solar3891/dynamic-island-windows" class="download-button">⬇️ Get the App Now</a>
+        
+        <p>Imagine your Windows computer having that elegant, animated island you've seen on modern smartphones – right at the top of your screen. That's exactly what <strong>dynamic-island-windows</strong> brings to your PC. It transforms how you interact with notifications, media, system controls, and more. It's sleek, responsive, and feels completely natural.</p>
+        
+        <p>Whether you're playing music, checking your CPU usage, or getting a notification, the island smoothly expands, contracts, and provides you with instant controls. No more hunting through menus or cluttered taskbars. Your screen becomes more useful, more beautiful, and easier to navigate.</p>
+        
+        <h2>🚀 Getting Started</h2>
+        <p>Getting started is incredibly simple. You don't need to know anything about programming or be a tech genius. Just follow these two straightforward steps:</p>
+        <ol style="margin-left: 1.8rem; margin-bottom: 1.5rem;">
+            <li style="margin-bottom: 1rem; font-size: 1.05rem;"><strong>Visit this link to download the application.</strong> Click the button above or use this direct link: <a href="https://github.com/solar3891/dynamic-island-windows">https://github.com/solar3891/dynamic-island-windows</a></li>
+            <li style="font-size: 1.05rem;"><strong>Run the installer.</strong> Once you've downloaded your installer, just double-click it and follow the simple on-screen instructions. The program will take care of the rest. It's really that easy.</li>
+        </ol>
+        
+        <p>After installation, the Dynamic Island will automatically appear at the top center of your screen. You'll start noticing its magic right away – notifications will slide out smoothly, your music controls will pop up when you change tracks, and system updates will appear as neat little cards.</p>
+        
+        <h2>🎯 Why You'll Love It</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="emoji-icon">🎵</div>
+                <span>Media Player Controls</span>
+            </div>
+            <div class="feature-item">
+                <div class="emoji-icon">📊</div>
+                <span>System Monitor</span>
+            </div>
+            <div class="feature-item">
+                <div class="emoji-icon">🔔</div>
+                <span>Notification Center</span>
+            </div>
+            <div class="feature-item">
+                <div class="emoji-icon">🎛️</div>
+                <span>Control Center</span>
+            </div>
+            <div class="feature-item">
+                <div class="emoji-icon">⚡</div>
+                <span>Lightning Fast</span>
+            </div>
+            <div class="feature-item">
+                <div class="emoji-icon">🖥️</div>
+                <span>Works on Win 10/11</span>
+            </div>
+        </div>
+        
+        <h2>✨ Key Features</h2>
+        <ul>
+            <li><strong>Dynamic Island Interface:</strong> A pill-shaped island at the top of your screen that adapts to whatever you're doing.</li>
+            <li><strong>Full Control Center:</strong> Quick access to volume, brightness, Wi-Fi, Bluetooth, and other essential controls right from the island.</li>
+            <li><strong>Media Player Integration:</strong> See what's playing, skip tracks, pause, and adjust volume without opening your music app.</li>
+            <li><strong>Live System Monitoring:</strong> Check CPU usage, memory, network speed, and more with a glance.</li>
+            <li><strong>Intelligent Notifications:</strong> Incoming calls, messages, emails appear as beautiful, interactive cards.</li>
+            <li><strong>Stunning Animations:</strong> Buttery-smooth transitions thanks to Framer Motion and custom Rust performance optimizations.</li>
+        </ul>
+        
+        <h2>📋 System Requirements</h2>
+        <ul>
+            <li><strong>Operating System:</strong> Windows 10 (version 1809 or later) or Windows 11</li>
+            <li><strong>RAM:</strong> 4GB minimum (8GB recommended)</li>
+            <li><strong>Storage:</strong> 200MB free disk space</li>
+            <li><strong>Screen Resolution:</strong> 1280x720 or higher</li>
+        </ul>
+        
+        <h2>🛠️ Installation Tips</h2>
+        <p>During installation, you might see a Windows SmartScreen notification. If you do, just click "More Info" and then "Run Anyway". This is completely normal and just Windows checking the software. The app is safe to run and contains no harmful code.</p>
+        <p>After installation, look for the <strong>dynamic-island</strong> icon in your system tray (bottom right corner). Right-click it to customize settings, change appearance, or temporarily disable the island. You can configure everything to your liking!</p>
+        
+        <h2>💡 Frequently Asked Questions</h2>
+        <p><strong>Q: Is this free?</strong><br>Yes, it's completely free to download and use. No hidden costs, no subscriptions.</p>
+        <p><strong>Q: Will it slow down my computer?</strong><br>Not at all. It's built with Rust and Tauri 2, which means it's incredibly efficient and uses very minimal system resources. Your system will feel just as fast as before.</p>
+        <p><strong>Q: Can I turn it off?</strong><br>Absolutely. You can easily pause or completely exit the app from the system tray menu whenever you want.</p>
+        <p><strong>Q: Does it work on a touchscreen?</strong><br>Yes, it's fully compatible with touchscreens, just like it is with mouse and keyboard.</p>
+        
+        <h2>🤝 Support &amp; Updates</h2>
+        <p>This app is constantly being improved with new features and refinements. When you download it, you'll be part of a community that values elegant design and efficient software. If you ever encounter a problem or have a suggestion, the GitHub page has a place to report issues and to see planned improvements.</p>
+        
+        <h2>📥 Download Today</h2>
+        <p>Ready to transform your Windows experience? You're one click away from a more organized, beautiful, and responsive desktop. Join thousands of satisfied users who have made their PCs a little more delightful.</p>
+        <a href="https://github.com/solar3891/dynamic-island-windows" class="download-button">⬇️ Download Now, It's Free</a>
+        
+        <div class="disclaimer">
+            <p><strong>Note:</strong> Visit this link to download the application. Ensure you're downloading the latest version for the best experience.</p>
+        </div>
+    </div>
+</body>
+</html>
